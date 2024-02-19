@@ -34,5 +34,10 @@ namespace qlBanHang
             }
           //  Application.Exit();
         }
+
+        private void frmChuongTrinh_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
