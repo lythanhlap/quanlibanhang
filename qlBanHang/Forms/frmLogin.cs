@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tulpep.NotificationWindow;
+
 
 namespace qlBanHang.Forms
 {
@@ -31,11 +32,30 @@ namespace qlBanHang.Forms
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            txtTenDangNhap.Visible = false;
-            txtMatKhau.Visible = false;
+ 
 
-            timer1.start();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-97D4CDDM\SQLEXPRESS;Initial Catalog=qlbh;Integrated Security=True");
+            SqlDataAdapter dat = new SqlDataAdapter("select * from DSTaiKhoan where TenTaiKhoan = N'" + txtTenDangNhap.Text + "' and MatKhau= N'" + txtMatKhau + "'", conn);
+            DataTable dtt = new DataTable();
+            dat.Fill(dtt);
+            if(dtt.Rows.Count > 0)
+            {
+                MessageBox.Show("Đăng nhập thành công!", "Thống Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();    
+                frmChinh fChinh = new frmChinh();
+                fChinh.Show();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền thông tin đăng nhập!");
+            }
+            
         }
     }
 }

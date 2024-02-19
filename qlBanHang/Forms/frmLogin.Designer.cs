@@ -121,13 +121,14 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Đăng Nhập";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtMatKhau.Location = new System.Drawing.Point(98, 402);
+            this.txtMatKhau.Location = new System.Drawing.Point(233, 401);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(586, 22);
+            this.txtMatKhau.Size = new System.Drawing.Size(451, 22);
             this.txtMatKhau.TabIndex = 7;
             this.txtMatKhau.Text = "Nhập vào mật khẩu";
             this.txtMatKhau.UseSystemPasswordChar = true;
@@ -136,9 +137,9 @@
             // 
             this.txtTenDangNhap.BackColor = System.Drawing.Color.White;
             this.txtTenDangNhap.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtTenDangNhap.Location = new System.Drawing.Point(98, 314);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(233, 316);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(587, 22);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(451, 22);
             this.txtTenDangNhap.TabIndex = 0;
             this.txtTenDangNhap.Text = "Nhập vào tên đăng nhập";
             // 
