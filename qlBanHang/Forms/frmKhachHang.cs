@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace qlBanHang.Forms
 {
-    public partial class frmChonNCC : Form
+    public partial class frmKhachHang : Form
     {
-        public frmChonNCC()
+        public frmKhachHang()
         {
             InitializeComponent();
         }

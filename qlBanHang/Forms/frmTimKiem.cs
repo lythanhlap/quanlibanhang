@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace qlBanHang.Forms
 {
-    public partial class frmChinh : Form
+    public partial class frmTimKiem : Form
     {
-        public frmChinh()
+        public frmTimKiem()
         {
             InitializeComponent();
         }

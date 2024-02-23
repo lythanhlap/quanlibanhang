@@ -46,52 +46,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\frmChinh.cs">
+    <Compile Include="Class\Function.cs" />
+    <Compile Include="Forms\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmChinh.Designer.cs">
-      <DependentUpon>frmChinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmChonNCC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmChonNCC.Designer.cs">
-      <DependentUpon>frmChonNCC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmChuongTrinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmChuongTrinh.Designer.cs">
-      <DependentUpon>frmChuongTrinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDangNhap.Designer.cs">
+    <Compile Include="Forms\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHoaDon.Designer.cs">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKhachHang.Designer.cs">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNhaCungCap.Designer.cs">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSanPham.Designer.cs">
+      <DependentUpon>frmSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTimKiem.Designer.cs">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\frmChinh.resx">
-      <DependentUpon>frmChinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmChonNCC.resx">
-      <DependentUpon>frmChonNCC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmChuongTrinh.resx">
-      <DependentUpon>frmChuongTrinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDangNhap.resx">
+    <EmbeddedResource Include="Forms\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHoaDon.resx">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNhaCungCap.resx">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSanPham.resx">
+      <DependentUpon>frmSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTimKiem.resx">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,6 +191,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_ok_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window_32px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_cropper_a7c6c6cdbfa8145ed21b380f2423383b_65c244d500e83 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_cropper_a7c6c6cdbfa8145ed21b380f2423383b_65c244d500e83.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window_32px2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
