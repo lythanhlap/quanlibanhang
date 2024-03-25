@@ -30,8 +30,9 @@ namespace qlBanHang.Forms
             if (MessageBox.Show("Xác nhận thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Class.Functions.Disconnect();   //Đóng kết nối
-                Application.Exit();
+                this.Close();
             }
+            dangNhap.Show();
         }
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -94,5 +95,37 @@ namespace qlBanHang.Forms
             sp.Show();
         }
 
+        private void btnNhaCungCap_Click(object sender, EventArgs e)
+        {
+            frmNhaCungCap ncc = new frmNhaCungCap();
+            ncc.Show();
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            frmNhanVien nv = new frmNhanVien();
+            nv.Show();
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            frmKhachHang kh = new frmKhachHang();
+            kh.Show();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            frmTimKiem t = new frmTimKiem();
+            t.Show();
+        }
+
+        private void thốngKêDoanhThuTheoThángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*frmReport rp = new frmReport();
+            rp.ShowDialog();
+            */
+            frmReport1 rp1 = new frmReport1();
+            rp1.ShowDialog();
+        }
     }
 }

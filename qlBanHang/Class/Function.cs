@@ -19,7 +19,7 @@ namespace qlBanHang.Class
             conn.ConnectionString = @"Data Source=LAPTOP-97D4CDDM\SQLEXPRESS;Initial Catalog=quanlibanhang;Integrated Security=True";
             conn.Open();
         }
-
+       
         public static void Disconnect()
         {
             if (conn.State == ConnectionState.Open)

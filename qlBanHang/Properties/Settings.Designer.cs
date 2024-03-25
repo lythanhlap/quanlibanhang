@@ -33,5 +33,16 @@ namespace qlBanHang.Properties {
                 return ((string)(this["QuanLyBanHangConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-97D4CDDM\\SQLEXPRESS;Initial Catalog=quanlibanhang;Integrated S" +
+            "ecurity=True;TrustServerCertificate=True")]
+        public string quanlibanhangConnectionString {
+            get {
+                return ((string)(this["quanlibanhangConnectionString"]));
+            }
+        }
     }
 }

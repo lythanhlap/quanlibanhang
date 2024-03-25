@@ -202,7 +202,89 @@ namespace qlBanHang.Forms
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-           
+            string sql;
+
+            if (dtSP.Rows.Count == 0)
+            {
+                MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (txtMaSanPham.Text == "")
+            {
+                MessageBox.Show("Bạn chưa chọn sản phẩm nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (cboMaNhaCungCap.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập mã nhà cung cấp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboMaNhaCungCap.Focus();
+                return;
+            }
+
+            if (txtTenSanPham.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập tên sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTenSanPham.Focus();
+                return;
+            }
+
+            if (txtSoLuong.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập số lượng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSoLuong.Focus();
+                return;
+            }
+            if (!Char.IsDigit(txtSoLuong.Text, txtSoLuong.Text.Length - 1))
+            {
+                MessageBox.Show("Số lượng không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSoLuong.Focus();
+                return;
+            }
+
+            if (txtDonGiaNhap.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập đơn giá nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDonGiaNhap.Focus();
+                return;
+            }
+            if (!Char.IsDigit(txtDonGiaNhap.Text, txtDonGiaNhap.Text.Length - 1))
+            {
+                MessageBox.Show("Đơn giá nhập không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDonGiaNhap.Focus();
+                return;
+            }
+
+            if (txtDonGiaBan.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập đơn giá bán", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDonGiaBan.Focus();
+                return;
+            }
+            if (!Char.IsDigit(txtDonGiaBan.Text, txtDonGiaBan.Text.Length - 1))
+            {
+                MessageBox.Show("Đơn giá bán không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDonGiaBan.Focus();
+                return;
+            }
+
+            sql = "SELECT MaNCC FROM NhaCungCap WHERE MaNCC=N'" + cboMaNhaCungCap.Text.Trim() + "'";
+            if (!Functions.CheckKey(sql))
+            {
+                if (MessageBox.Show("Mã nhà cung cấp không tồn tại, bạn có muốn thêm nhà cung cấp", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    frmNhaCungCap ncc = new frmNhaCungCap();
+                    ncc.Show();
+                }
+                return;
+            }
+
+            sql = "UPDATE SanPham SET MaNCC = N'" + cboMaNhaCungCap.Text.Trim() + "', TenSP = N'" + txtTenSanPham.Text.Trim() + "', SoLuong = N'" + txtSoLuong.Text.Trim() + "', DonGiaNhap = N'" + txtDonGiaNhap.Text.Trim() + "', DonGiaBan = N'" + txtDonGiaBan.Text.Trim() + "' WHERE MaSP = N'" + txtMaSanPham.Text.Trim() + "'";
+            Functions.RunSQL(sql);
+            LoadDataGridView();
+            ResetValues();
+            btnBoQua.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

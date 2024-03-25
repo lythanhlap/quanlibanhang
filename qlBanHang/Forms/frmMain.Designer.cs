@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
@@ -46,6 +47,8 @@
             this.mnuDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHeThong = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêDoanhThuTheoThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,12 +59,13 @@
             this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btnTimKiem.Location = new System.Drawing.Point(524, 364);
+            this.btnTimKiem.Location = new System.Drawing.Point(590, 364);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(246, 57);
+            this.btnTimKiem.Size = new System.Drawing.Size(277, 57);
             this.btnTimKiem.TabIndex = 15;
             this.btnTimKiem.Text = "Tìm kiếm hóa đơn";
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnHoaDon
             // 
@@ -69,9 +73,9 @@
             this.btnHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHoaDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoaDon.ForeColor = System.Drawing.Color.Black;
-            this.btnHoaDon.Location = new System.Drawing.Point(524, 262);
+            this.btnHoaDon.Location = new System.Drawing.Point(590, 262);
             this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.Size = new System.Drawing.Size(246, 57);
+            this.btnHoaDon.Size = new System.Drawing.Size(277, 57);
             this.btnHoaDon.TabIndex = 13;
             this.btnHoaDon.Text = "Quản lý hóa đơn";
             this.btnHoaDon.UseVisualStyleBackColor = false;
@@ -83,9 +87,9 @@
             this.btnSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSanPham.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham.ForeColor = System.Drawing.Color.Black;
-            this.btnSanPham.Location = new System.Drawing.Point(176, 364);
+            this.btnSanPham.Location = new System.Drawing.Point(198, 364);
             this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.Size = new System.Drawing.Size(250, 57);
+            this.btnSanPham.Size = new System.Drawing.Size(281, 57);
             this.btnSanPham.TabIndex = 11;
             this.btnSanPham.Text = "Quản lý sản phẩm";
             this.btnSanPham.UseVisualStyleBackColor = false;
@@ -97,12 +101,13 @@
             this.btnNhaCungCap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhaCungCap.ForeColor = System.Drawing.Color.Black;
-            this.btnNhaCungCap.Location = new System.Drawing.Point(176, 157);
+            this.btnNhaCungCap.Location = new System.Drawing.Point(198, 157);
             this.btnNhaCungCap.Name = "btnNhaCungCap";
-            this.btnNhaCungCap.Size = new System.Drawing.Size(250, 57);
+            this.btnNhaCungCap.Size = new System.Drawing.Size(281, 57);
             this.btnNhaCungCap.TabIndex = 10;
-            this.btnNhaCungCap.Text = "Quản lý nhà cung cấp";
+            this.btnNhaCungCap.Text = "Quản lý nguồn hàng";
             this.btnNhaCungCap.UseVisualStyleBackColor = false;
+            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
             // 
             // label1
             // 
@@ -110,7 +115,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label1.Location = new System.Drawing.Point(138, 73);
+            this.label1.Location = new System.Drawing.Point(252, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(697, 57);
             this.label1.TabIndex = 9;
@@ -145,12 +150,13 @@
             this.btnKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.Black;
-            this.btnKhachHang.Location = new System.Drawing.Point(524, 157);
+            this.btnKhachHang.Location = new System.Drawing.Point(590, 157);
             this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Size = new System.Drawing.Size(246, 57);
+            this.btnKhachHang.Size = new System.Drawing.Size(277, 57);
             this.btnKhachHang.TabIndex = 14;
             this.btnKhachHang.Text = "Quản lý khách hàng";
             this.btnKhachHang.UseVisualStyleBackColor = false;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // mnuSanPham
             // 
@@ -221,13 +227,29 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuHeThong,
             this.mnuDanhMuc,
-            this.mnuHoaDon});
+            this.mnuHoaDon,
+            this.thốngKêToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(932, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1048, 33);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // thốngKêToolStripMenuItem
+            // 
+            this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thốngKêDoanhThuTheoThángToolStripMenuItem});
+            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(95, 27);
+            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            // 
+            // thốngKêDoanhThuTheoThángToolStripMenuItem
+            // 
+            this.thốngKêDoanhThuTheoThángToolStripMenuItem.Name = "thốngKêDoanhThuTheoThángToolStripMenuItem";
+            this.thốngKêDoanhThuTheoThángToolStripMenuItem.Size = new System.Drawing.Size(340, 28);
+            this.thốngKêDoanhThuTheoThángToolStripMenuItem.Text = "Thống kê doanh thu theo tháng";
+            this.thốngKêDoanhThuTheoThángToolStripMenuItem.Click += new System.EventHandler(this.thốngKêDoanhThuTheoThángToolStripMenuItem_Click);
             // 
             // btnNhanVien
             // 
@@ -235,19 +257,20 @@
             this.btnNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.btnNhanVien.Location = new System.Drawing.Point(176, 262);
+            this.btnNhanVien.Location = new System.Drawing.Point(198, 262);
             this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(250, 57);
+            this.btnNhanVien.Size = new System.Drawing.Size(281, 57);
             this.btnNhanVien.TabIndex = 12;
             this.btnNhanVien.Text = "Quản lý nhân viên";
             this.btnNhanVien.UseVisualStyleBackColor = false;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(932, 505);
+            this.ClientSize = new System.Drawing.Size(1048, 505);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnHoaDon);
             this.Controls.Add(this.btnSanPham);
@@ -256,6 +279,8 @@
             this.Controls.Add(this.btnKhachHang);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnNhanVien);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.Text = "Cửa hàng dày dép nữ Hà Huyền Shoes";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -287,5 +312,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuHeThong;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button btnNhanVien;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêDoanhThuTheoThángToolStripMenuItem;
     }
 }

@@ -345,5 +345,22 @@ namespace qlBanHang.Forms
             Functions.FillComboBox("SELECT MaHD FROM HoaDon", cboMaHoaDon, "MaHD");
             cboMaHoaDon.SelectedIndex = -1;
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (cboMaHoaDon.Text == "")
+            {
+                MessageBox.Show("Bạn phải chọn mã hóa đơn để tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cboMaHoaDon.Focus();
+                return;
+            }
+            txtMaHoaDon.Text = cboMaHoaDon.Text;
+            LoadInfoHoaDon();
+            LoadDataGridView();
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnLuu.Enabled = true;
+            cboMaHoaDon.SelectedIndex = -1;
+        }
     }
 }
