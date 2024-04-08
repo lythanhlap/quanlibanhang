@@ -115,11 +115,23 @@
     <Compile Include="Forms\frmReport1.Designer.cs">
       <DependentUpon>frmReport1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmReportCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportCustomer.Designer.cs">
+      <DependentUpon>frmReportCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmSanPham.Designer.cs">
       <DependentUpon>frmSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmTimKiem.cs">
       <SubType>Form</SubType>
@@ -151,7 +163,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>quanlibanhangDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="quanlibanhangDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quanlibanhangDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="quanlibanhangDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quanlibanhangDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="quanlibanhangDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quanlibanhangDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="test.cs" />
     <EmbeddedResource Include="Forms\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,8 +204,14 @@
     <EmbeddedResource Include="Forms\frmReport1.resx">
       <DependentUpon>frmReport1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportCustomer.resx">
+      <DependentUpon>frmReportCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTaiKhoan.resx">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTimKiem.resx">
       <DependentUpon>frmTimKiem.cs</DependentUpon>
@@ -195,6 +229,8 @@
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="ReportCus.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -253,6 +289,39 @@
     </None>
     <None Include="quanlibanhangDataSet3.xss">
       <DependentUpon>quanlibanhangDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="quanlibanhangDataSet4.xsc">
+      <DependentUpon>quanlibanhangDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="quanlibanhangDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quanlibanhangDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quanlibanhangDataSet4.xss">
+      <DependentUpon>quanlibanhangDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="quanlibanhangDataSet5.xsc">
+      <DependentUpon>quanlibanhangDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="quanlibanhangDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quanlibanhangDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quanlibanhangDataSet5.xss">
+      <DependentUpon>quanlibanhangDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="quanlibanhangDataSet6.xsc">
+      <DependentUpon>quanlibanhangDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="quanlibanhangDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quanlibanhangDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quanlibanhangDataSet6.xss">
+      <DependentUpon>quanlibanhangDataSet6.xsd</DependentUpon>
     </None>
     <None Include="Resources\icons8-home-32.png" />
   </ItemGroup>

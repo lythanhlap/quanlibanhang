@@ -43,6 +43,7 @@
             this.mnuNhaCungCap = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDanhMuc = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNhanVien = new System.Windows.Forms.ToolStripMenuItem();
+            this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHeThong = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +51,8 @@
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêDoanhThuTheoThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNhanVien = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.thoongsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,7 +188,8 @@
             this.mnuNhaCungCap,
             this.mnuKhachHang,
             this.mnuNhanVien,
-            this.mnuSanPham});
+            this.mnuSanPham,
+            this.tàiKhoảnToolStripMenuItem});
             this.mnuDanhMuc.Name = "mnuDanhMuc";
             this.mnuDanhMuc.Size = new System.Drawing.Size(103, 27);
             this.mnuDanhMuc.Text = "Danh mục";
@@ -196,6 +200,13 @@
             this.mnuNhanVien.Size = new System.Drawing.Size(201, 28);
             this.mnuNhanVien.Text = "Nhân viên";
             this.mnuNhanVien.Click += new System.EventHandler(this.mnuNhanVien_Click);
+            // 
+            // tàiKhoảnToolStripMenuItem
+            // 
+            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
+            this.tàiKhoảnToolStripMenuItem.Text = "Tài Khoản";
+            this.tàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
             // 
             // mnuThoat
             // 
@@ -239,7 +250,8 @@
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thốngKêDoanhThuTheoThángToolStripMenuItem});
+            this.thốngKêDoanhThuTheoThángToolStripMenuItem,
+            this.thoongsToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(95, 27);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
@@ -247,7 +259,7 @@
             // thốngKêDoanhThuTheoThángToolStripMenuItem
             // 
             this.thốngKêDoanhThuTheoThángToolStripMenuItem.Name = "thốngKêDoanhThuTheoThángToolStripMenuItem";
-            this.thốngKêDoanhThuTheoThángToolStripMenuItem.Size = new System.Drawing.Size(340, 28);
+            this.thốngKêDoanhThuTheoThángToolStripMenuItem.Size = new System.Drawing.Size(349, 28);
             this.thốngKêDoanhThuTheoThángToolStripMenuItem.Text = "Thống kê doanh thu theo tháng";
             this.thốngKêDoanhThuTheoThángToolStripMenuItem.Click += new System.EventHandler(this.thốngKêDoanhThuTheoThángToolStripMenuItem_Click);
             // 
@@ -265,12 +277,30 @@
             this.btnNhanVien.UseVisualStyleBackColor = false;
             this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(531, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 27);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // thoongsToolStripMenuItem
+            // 
+            this.thoongsToolStripMenuItem.Name = "thoongsToolStripMenuItem";
+            this.thoongsToolStripMenuItem.Size = new System.Drawing.Size(349, 28);
+            this.thoongsToolStripMenuItem.Text = "Thống kê khách hàng theo tháng";
+            this.thoongsToolStripMenuItem.Click += new System.EventHandler(this.thoongsToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1048, 505);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnHoaDon);
             this.Controls.Add(this.btnSanPham);
@@ -314,5 +344,8 @@
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêDoanhThuTheoThángToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem thoongsToolStripMenuItem;
     }
 }
