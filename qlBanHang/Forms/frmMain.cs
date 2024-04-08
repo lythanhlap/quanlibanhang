@@ -65,7 +65,7 @@ namespace qlBanHang.Forms
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            textBox1.Text = this.currentUserType;
         }
 
         private void mnuThoat_Click(object sender, EventArgs e)
@@ -311,6 +311,11 @@ namespace qlBanHang.Forms
             {
                 MessageBox.Show("Bạn không có quyền truy cập vào chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
     

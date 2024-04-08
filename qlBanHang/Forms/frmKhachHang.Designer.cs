@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -133,7 +134,7 @@
             // 
             // btnBoQua
             // 
-            this.btnBoQua.Location = new System.Drawing.Point(733, 4);
+            this.btnBoQua.Location = new System.Drawing.Point(854, 4);
             this.btnBoQua.Margin = new System.Windows.Forms.Padding(4);
             this.btnBoQua.Name = "btnBoQua";
             this.btnBoQua.Size = new System.Drawing.Size(120, 43);
@@ -144,7 +145,7 @@
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(917, 4);
+            this.btnDong.Location = new System.Drawing.Point(1009, 4);
             this.btnDong.Margin = new System.Windows.Forms.Padding(4);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(120, 43);
@@ -155,7 +156,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(553, 4);
+            this.btnLuu.Location = new System.Drawing.Point(528, 4);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(120, 43);
@@ -166,7 +167,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(377, 4);
+            this.btnSua.Location = new System.Drawing.Point(371, 4);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(120, 43);
@@ -177,7 +178,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(208, 4);
+            this.btnXoa.Location = new System.Drawing.Point(204, 4);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(120, 43);
@@ -188,7 +189,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(41, 4);
+            this.btnThem.Location = new System.Drawing.Point(30, 4);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(120, 43);
@@ -265,6 +266,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnTimKiem);
             this.panel2.Controls.Add(this.btnBoQua);
             this.panel2.Controls.Add(this.btnDong);
             this.panel2.Controls.Add(this.btnLuu);
@@ -272,11 +274,22 @@
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(74, 267);
+            this.panel2.Location = new System.Drawing.Point(44, 267);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1091, 57);
+            this.panel2.Size = new System.Drawing.Size(1154, 57);
             this.panel2.TabIndex = 28;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Location = new System.Drawing.Point(696, 4);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(120, 43);
+            this.btnTimKiem.TabIndex = 6;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // frmKhachHang
             // 
@@ -329,5 +342,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnTimKiem;
     }
 }

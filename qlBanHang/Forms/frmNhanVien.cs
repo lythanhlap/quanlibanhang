@@ -40,6 +40,7 @@ namespace qlBanHang.Forms
             txtMaNhanVien.Enabled = false; ;
             btnLuu.Enabled = false;
             btnBoQua.Enabled = false;
+            
             LoadDataGridView();
         }
 
@@ -247,5 +248,21 @@ namespace qlBanHang.Forms
             txtMaNhanVien.Enabled = false;
         }
 
+        private void TimKiemNhanVien(string keyword)
+        {
+            DataView dv = new DataView(dtNV);
+            dv.RowFilter = $"TenNV LIKE '%{keyword}%'";
+
+            dgvNhanVien.DataSource = dv.ToTable();
+            if (dv.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy kết quả phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            TimKiemNhanVien(txtTenNhanVien.Text.Trim());
+
+        }
     }
 }

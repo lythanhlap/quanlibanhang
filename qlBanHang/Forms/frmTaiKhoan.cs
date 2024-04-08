@@ -39,6 +39,7 @@ namespace qlBanHang.Forms
             txtTenDangNhap.Enabled = false; ;
             btnLuu.Enabled = false;
             btnBoQua.Enabled = false;
+            txtFindTenDangNhap.Enabled=false;
             LoadDataGridView();
 
         }
@@ -223,7 +224,19 @@ namespace qlBanHang.Forms
             btnXoa.Enabled = true;
             btnBoQua.Enabled = true;
         }
-       
+
+        private void TimKiemTaiKhoan(string keyword)
+        {
+            DataView dv = new DataView(dtTK);
+            dv.RowFilter = $"TenDangNhap LIKE '%{keyword}%'";
+
+            dgvTaiKhoan.DataSource = dv.ToTable();
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            txtFindTenDangNhap.Enabled = true;
+            TimKiemTaiKhoan(txtFindTenDangNhap.Text.Trim());
+        }
     }
        
 }

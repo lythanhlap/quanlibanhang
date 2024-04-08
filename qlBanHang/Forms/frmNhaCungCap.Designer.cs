@@ -41,12 +41,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnTimKiem);
             this.panel2.Controls.Add(this.btnBoQua);
             this.panel2.Controls.Add(this.btnDong);
             this.panel2.Controls.Add(this.btnLuu);
@@ -54,15 +56,15 @@
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(62, 244);
+            this.panel2.Location = new System.Drawing.Point(9, 244);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1007, 57);
+            this.panel2.Size = new System.Drawing.Size(1108, 57);
             this.panel2.TabIndex = 12;
             // 
             // btnBoQua
             // 
-            this.btnBoQua.Location = new System.Drawing.Point(707, 4);
+            this.btnBoQua.Location = new System.Drawing.Point(808, 4);
             this.btnBoQua.Margin = new System.Windows.Forms.Padding(4);
             this.btnBoQua.Name = "btnBoQua";
             this.btnBoQua.Size = new System.Drawing.Size(120, 43);
@@ -73,7 +75,7 @@
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(883, 4);
+            this.btnDong.Location = new System.Drawing.Point(962, 4);
             this.btnDong.Margin = new System.Windows.Forms.Padding(4);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(120, 43);
@@ -84,7 +86,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(535, 4);
+            this.btnLuu.Location = new System.Drawing.Point(484, 4);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(120, 43);
@@ -95,7 +97,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(356, 4);
+            this.btnSua.Location = new System.Drawing.Point(317, 4);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(120, 43);
@@ -106,7 +108,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(181, 4);
+            this.btnXoa.Location = new System.Drawing.Point(170, 4);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(120, 43);
@@ -117,7 +119,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(4, 4);
+            this.btnThem.Location = new System.Drawing.Point(22, 4);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(120, 43);
@@ -185,12 +187,23 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(389, 61);
+            this.label1.Location = new System.Drawing.Point(389, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(328, 54);
             this.label1.TabIndex = 13;
             this.label1.Text = "NHÀ CUNG CẤP";
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Location = new System.Drawing.Point(648, 4);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(120, 43);
+            this.btnTimKiem.TabIndex = 6;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // frmNhaCungCap
             // 
@@ -229,5 +242,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnTimKiem;
     }
 }

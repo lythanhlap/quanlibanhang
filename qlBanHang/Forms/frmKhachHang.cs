@@ -249,7 +249,20 @@ namespace qlBanHang.Forms
             btnLuu.Enabled = false;
             txtMaKhachHang.Enabled = false;
         }
+        private void TimKiemKhachHang(string keyword)
+        {
+            DataView dv = new DataView(dtKH);
+            dv.RowFilter = $"TenKH LIKE '%{keyword}%'";
 
-
+            dgvKhachHang.DataSource = dv.ToTable();
+            if (dv.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy kết quả phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            TimKiemKhachHang(txtTenKhachHang.Text.Trim());
+        }
     }
 }

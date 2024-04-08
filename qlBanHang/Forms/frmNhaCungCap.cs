@@ -184,6 +184,16 @@ namespace qlBanHang.Forms
             txtMaNhaCungCap.Enabled = false;
         }
 
+        private void TimKiemNCC(string keyword)
+        {
+            DataView dv = new DataView(dtNCC);
+            dv.RowFilter = $"TenNCC LIKE '%{keyword}%'";
+            dgvNhaCungCap.DataSource = dv.ToTable();
 
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            TimKiemNCC(txtTenNhaCungCap.Text.Trim  ());
+        }
     }
 }

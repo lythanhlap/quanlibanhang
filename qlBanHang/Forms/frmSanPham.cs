@@ -356,6 +356,7 @@ namespace qlBanHang.Forms
             sql = "SELECT * FROM SanPham";
             dtSP = Functions.GetDataToTable(sql);
             dgvSanPham.DataSource = dtSP;
+            
         }
 
         private void btnDong_Click(object sender, EventArgs e)
