@@ -125,7 +125,18 @@ namespace qlBanHang.Forms
                 txtSDT.Focus();
                 return;
             }
-            if (txtSDT.Text.Trim().Length != 10 || !Char.IsDigit(txtSDT.Text, txtSDT.Text.Length - 1))
+            string phoneNumber = txtSDT.Text.Trim();
+            bool containsNonDigit = false;
+
+            foreach (char c in phoneNumber)
+            {
+                if (!char.IsDigit(c))
+                {
+                    containsNonDigit = true;
+                    break; // Không cần kiểm tra tiếp nếu đã tìm thấy một ký tự không phải là số
+                }
+            }
+            if (txtSDT.Text.Trim().Length != 10 || containsNonDigit == true)
             {
                 MessageBox.Show("Số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSDT.Focus();
@@ -159,7 +170,7 @@ namespace qlBanHang.Forms
 
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
-            txtMaKhachHang.Enabled = false; ;
+            txtMaKhachHang.Enabled = true; ;
             btnLuu.Enabled = false; ;
             btnBoQua.Enabled = false; ;
             LoadDataGridView();
@@ -197,7 +208,18 @@ namespace qlBanHang.Forms
                 txtSDT.Focus();
                 return;
             }
-            if (txtSDT.Text.Trim().Length != 10 || !Char.IsDigit(txtSDT.Text, txtSDT.Text.Length - 1))
+            string phoneNumber = txtSDT.Text.Trim();
+            bool containsNonDigit = false;
+
+            foreach (char c in phoneNumber)
+            {
+                if (!char.IsDigit(c))
+                {
+                    containsNonDigit = true;
+                    break; // Không cần kiểm tra tiếp nếu đã tìm thấy một ký tự không phải là số
+                }
+            }
+            if (txtSDT.Text.Trim().Length != 10 || containsNonDigit == true)
             {
                 MessageBox.Show("Số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSDT.Focus();

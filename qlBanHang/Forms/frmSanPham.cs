@@ -366,5 +366,10 @@ namespace qlBanHang.Forms
                 this.Close();
             }
         }
+
+        private void txtMaSanPham_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

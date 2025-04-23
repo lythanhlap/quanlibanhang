@@ -111,6 +111,7 @@
             this.txtMaSanPham.Name = "txtMaSanPham";
             this.txtMaSanPham.Size = new System.Drawing.Size(333, 29);
             this.txtMaSanPham.TabIndex = 0;
+            this.txtMaSanPham.TextChanged += new System.EventHandler(this.txtMaSanPham_TextChanged);
             // 
             // label7
             // 

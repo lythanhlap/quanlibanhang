@@ -197,7 +197,18 @@ namespace qlBanHang.Forms
                 txtSDT.Focus();
                 return;
             }
-            if (txtSDT.Text.Trim().Length != 10 || !Char.IsDigit(txtSDT.Text, txtSDT.Text.Length - 1))
+            string phoneNumber = txtSDT.Text.Trim();
+            bool containsNonDigit = false;
+
+            foreach (char c in phoneNumber)
+            {
+                if (!char.IsDigit(c))
+                {
+                    containsNonDigit = true;
+                    break; // Không cần kiểm tra tiếp nếu đã tìm thấy một ký tự không phải là số
+                }
+            }
+            if (txtSDT.Text.Trim().Length != 10 || !Char.IsDigit(txtSDT.Text, txtSDT.Text.Length - 1) || containsNonDigit == true )
             {
                 MessageBox.Show("Số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSDT.Focus();
@@ -262,6 +273,11 @@ namespace qlBanHang.Forms
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             TimKiemNhanVien(txtTenNhanVien.Text.Trim());
+
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

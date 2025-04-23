@@ -12,6 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\QLBH1\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +47,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EC0D610A65F276F2CF1484AAD49B116764D820C3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>qlBanHang_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -67,6 +95,12 @@
   <ItemGroup>
     <Compile Include="Class\Connection.cs" />
     <Compile Include="Class\Function.cs" />
+    <Compile Include="Forms\addAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\addAccount.Designer.cs">
+      <DependentUpon>addAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +136,12 @@
     </Compile>
     <Compile Include="Forms\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQuanLiTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQuanLiTaiKhoan.Designer.cs">
+      <DependentUpon>frmQuanLiTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmReport.cs">
       <SubType>Form</SubType>
@@ -178,8 +218,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>quanlibanhangDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="quanlibanhangDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quanlibanhangDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="test.cs" />
+    <EmbeddedResource Include="Forms\addAccount.resx">
+      <DependentUpon>addAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQuanLiTaiKhoan.resx">
+      <DependentUpon>frmQuanLiTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReport.resx">
       <DependentUpon>frmReport.cs</DependentUpon>
@@ -246,6 +296,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="qlBanHang_TemporaryKey.pfx" />
     <None Include="quanlibanhangDataSet.xsc">
       <DependentUpon>quanlibanhangDataSet.xsd</DependentUpon>
     </None>
@@ -322,6 +373,17 @@
     </None>
     <None Include="quanlibanhangDataSet6.xss">
       <DependentUpon>quanlibanhangDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="quanlibanhangDataSet7.xsc">
+      <DependentUpon>quanlibanhangDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="quanlibanhangDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quanlibanhangDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quanlibanhangDataSet7.xss">
+      <DependentUpon>quanlibanhangDataSet7.xsd</DependentUpon>
     </None>
     <None Include="Resources\icons8-home-32.png" />
   </ItemGroup>
@@ -420,6 +482,18 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

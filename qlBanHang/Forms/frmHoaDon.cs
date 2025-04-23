@@ -171,7 +171,7 @@ namespace qlBanHang.Forms
                 cboMaSanPham.Focus();
                 return;
             }
-
+          
             // Kiểm tra xem số lượng hàng trong kho còn đủ để cung cấp không?
             sl = Convert.ToDouble(Functions.GetFieldValues("SELECT SoLuong FROM SanPham WHERE MaSP = N'" + cboMaSanPham.SelectedValue + "'"));
             if (Convert.ToDouble(txtSoLuong.Text.Trim()) > sl)
@@ -181,6 +181,7 @@ namespace qlBanHang.Forms
                 txtSoLuong.Focus();
                 return;
             }
+           
 
             //Thêm vào bảng chi tiết hóa đơn
             sql = "INSERT INTO ChiTietHoaDon VALUES (N'" + txtMaHoaDon.Text.Trim() + "', N'" + cboMaSanPham.SelectedValue + "'," + txtSoLuong.Text.Trim() + ", " + txtDonGia.Text.Trim() + ", " + txtGiamGia.Text.Trim() + ", " + txtThanhTien.Text.Trim() + ")";

@@ -238,8 +238,10 @@ namespace qlBanHang.Forms
         {
             if (this.currentUserType.Replace(" ", "") == "seller" || this.currentUserType.Replace(" ", "") == "admin")
             {
-                frmTimKiem t = new frmTimKiem();
+                frmQuanLiTaiKhoan t = new frmQuanLiTaiKhoan();
+                this.Hide();
                 t.Show();
+                
             }
             else
             {

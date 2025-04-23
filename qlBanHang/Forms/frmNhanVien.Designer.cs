@@ -51,8 +51,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,6 +78,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(393, 29);
             this.txtSDT.TabIndex = 5;
+            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             // 
             // dtpNgaySinh
             // 
@@ -313,6 +314,19 @@
             this.panel2.Size = new System.Drawing.Size(1237, 106);
             this.panel2.TabIndex = 6;
             // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Location = new System.Drawing.Point(724, 33);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(120, 43);
+            this.btnTimKiem.TabIndex = 6;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.txtSDT);
@@ -334,19 +348,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1237, 154);
             this.panel1.TabIndex = 4;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(724, 33);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(120, 43);
-            this.btnTimKiem.TabIndex = 6;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // frmNhanVien
             // 
